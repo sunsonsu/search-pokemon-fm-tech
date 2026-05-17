@@ -161,12 +161,12 @@ function PokemonSearch() {
                     } as React.CSSProperties}
                   >
                     <div className="pokemon-name">{pokemon.name}</div>
+                    <div className="classification-tag">{pokemon.classification}</div>
+
                     <div className="pokemon-img-wrap">
                       <div className="pokemon-img-glow" />
                       <img className="pokemon-img" src={pokemon.image} alt={pokemon.name} />
                     </div>
-
-                    <div className="classification-tag">{pokemon.classification}</div>
 
                     <div className="types-row">
                       {pokemon.types.map((type) => {
