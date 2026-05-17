@@ -165,7 +165,7 @@ function PokemonSearch() {
 
                     <div className="pokemon-img-wrap">
                       <div className="pokemon-img-glow" />
-                      <img className="pokemon-img" src={pokemon.image} alt={pokemon.name} />
+                      <img key={pokemon.name} className="pokemon-img" src={pokemon.image} alt={pokemon.name} />
                     </div>
 
                     <div className="types-row">
@@ -238,21 +238,21 @@ function PokemonSearch() {
 
                       <div className="stat-row">
                         <div className="stat-label-row">
-                          <span className="stat-label">Max CP</span>
-                          <span className="stat-value">{pokemon.maxCP}</span>
-                        </div>
-                        <div className="stat-bar-bg">
-                          <div className="stat-bar-fill" style={{ width: `${Math.min(100, (pokemon.maxCP / 4000) * 100)}%` }} />
-                        </div>
-                      </div>
-
-                      <div className="stat-row">
-                        <div className="stat-label-row">
                           <span className="stat-label">Max HP</span>
                           <span className="stat-value">{pokemon.maxHP}</span>
                         </div>
                         <div className="stat-bar-bg">
                           <div className="stat-bar-fill" style={{ width: `${Math.min(100, (pokemon.maxHP / 500) * 100)}%`, background: "linear-gradient(90deg,#388E3C,#69F0AE)" }} />
+                        </div>
+                      </div>
+
+                      <div className="stat-row">
+                        <div className="stat-label-row">
+                          <span className="stat-label">Max CP</span>
+                          <span className="stat-value">{pokemon.maxCP}</span>
+                        </div>
+                        <div className="stat-bar-bg">
+                          <div className="stat-bar-fill" style={{ width: `${Math.min(100, (pokemon.maxCP / 4000) * 100)}%` }} />
                         </div>
                       </div>
 
